@@ -1,0 +1,18 @@
+    <%- include('partials/log') %>
+    <link rel="stylesheet" href="/styles/Login.css">
+
+
+<div class="box">
+    <h1>Login</h1>
+    <% if (err) { %>
+        <span style="color: red;"><%= err %></span>
+    <% } %>
+    <form action="/student" method="POST">
+        <input placeholder="Email" name="email" type="email" required />
+        <a href="/forget-password">Forgot Password ?</a>
+        <input placeholder="Password" name="password" type="password" required />
+        <a href="/register">Signup</a>
+        <button>Login</button>
+    </form>
+</div>
+

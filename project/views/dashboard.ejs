@@ -1,0 +1,43 @@
+
+<%- include('partials/head')%>
+<link rel="stylesheet" href="/styles/dashboard.css">
+
+<body class="box">
+    <main>
+            <div class="basic">
+                <p><b>Name :</b> <%= student_name %></p>
+                <p><b>Roll Number :</b> <%= id %></p>
+            </div>
+
+        <div>
+            <h2>Courses</h2>
+            <p>You are enrolled in these courses:</p>
+            <ul>
+                <li><%= course_1 || "N/A" %></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Attendance</h2>
+            <table class="attend-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Course</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>1</td>
+                    <td><%=course_1%></td>
+                    <td>1</td>
+                    <td>2</td>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+    <%- include('partials/footer')%>
+   
